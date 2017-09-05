@@ -29,7 +29,8 @@
     "passport-local-mongoose": "^1.0.0",
     "sendgrid": "^4.7.1",
     "sendgrid-rest": "^2.3.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "stylus": "0.42.3"
   }
 
 }
