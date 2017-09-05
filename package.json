@@ -1,45 +1,34 @@
 {
-  "name": "Sun",
-  "version": "1.0.0",
-  "description": "Sun's space",
-  "homepage": "https://www.amsun.me/",
-  "keywords": [
-    "Sun",
-    "personal",
-    "blog,knowledge"
-  ],
+  "name": "Amsun",
+  "version": "1.0.1",
+  "description": "Sun",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bytesun/sunode"
-  },
-  "engines": {
-    "node": "*",
-    "npm": "*"
-  },
-  
-  "dependencies": {
-
-    "body-parser": "~1.0.0",
-    "connect-flash": "*",
-    "cookie-parser": "~1.0.1",
-    "debug": "~0.7.4",
-    "ejs": "~0.8.5",
-    "express": "~4.2.0",
-    "express-session": "*",
-    "mongoose": "^4.4.1",
-    "morgan": "~1.0.0",
-    "node-images": "*",
-    "static-favicon": "~1.0.0",
-    "stylus": "0.42.3",
-    "passport": "^0.2.1",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^1.0.0" 
-  },
-  "devDependencies": {},
-  "bundleDependencies": [],
   "main": "app.js",
   "scripts": {
     "start": "node --use_strict app.js"
+  },
+  "author": "Richard Sun",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.0.1",
+    "csurf": "^1.9.0",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
+    "express": "^4.14.1",
+    "express-session": "*",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.17.1",
+    "mongoose": "^4.4.1",
+    "morgan": "~1.0.0",
+    "node-images": "*",
+    "passport": "^0.2.1",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "sendgrid": "^4.7.1",
+    "sendgrid-rest": "^2.3.0",
+    "static-favicon": "~1.0.0"
   }
+
 }
