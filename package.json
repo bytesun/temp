@@ -5,7 +5,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node --use_strict app.js"
+    "start": "node app.js"
   },
   "author": "Richard Sun",
   "license": "ISC",
