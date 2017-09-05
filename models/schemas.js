@@ -45,6 +45,9 @@ var host = process.env.OPENSHIFT_MONGODB_DB_HOST||"localhost";
 var port = process.env.OPENSHIFT_MONGODB_DB_PORT||'27017';
 var username = process.env.OPENSHIFT_MONGODB_DB_USERNAME||'test';
 var password = process.env.OPENSHIFT_MONGODB_DB_PASSWORD||'11111111';
- 
-mongoose.connect( 'mongodb://'+username+':'+password+'@'+host+':'+port+'/amsun' );
+
+mongoose.Promise = global.Promise;
+mongoose.connect( 'mongodb://'+username+':'+password+'@'+host+':'+port+'/amsun',{
+    useMongoClient: true,
+});
 
