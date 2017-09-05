@@ -1,0 +1,21 @@
+<%- include header %>
+<div id="login-template" class="container">
+	<table width="100%">
+		<tr><td align="center"><h1><span class="text text-success">Register</span></h1>
+		<br><br>
+		</td></tr>
+		<tr><td align="center">
+
+			 <form class="form-signin" action="/register" method="post" >
+			 	
+		        <label for="inputEmail" class="sr-only">User Name</label>
+		        <input type="text" id="username" name="username" class="form-control" placeholder="user name" required autofocus>
+		        <label for="inputPassword" class="sr-only">Password</label>
+		        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+		        <input type="submit" class="form-control" >
+		      </form>
+		</td></tr>
+		</table>
+
+</div>
+<%- include footer %>

@@ -1,0 +1,106 @@
+<%- include header %>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item " href="/">Home</a>
+          <a class="blog-nav-item active" href="/think">Think</a>
+          <a class="blog-nav-item " href="/collection">Collection</a>
+          <a class="blog-nav-item " href="http://www.sunorth.org" target="_blank">Sunorth</a>
+          <a class="blog-nav-item " href="http://www.bluepage.me" target="_blank">Bluepage</a>
+        </nav>
+      </div>
+    </div>
+    <!--end of header -->
+<div class="container"> 	
+	<div class="row">
+		<div class="col-sm-12 col-md-8">
+			
+			<!-- ----------------------------------blog list -->
+			<div class="row">
+				<div class="col-sm-12">	
+				<br>
+				<% blogs.forEach(function (blog, index) { %>
+				<% if(blog.title == null){%>
+					<h3 id="blog_<%=index%>"  class="suncolor"><%= blog.createdate %></h3>	
+				<% }else{%>
+					<h3 id="blog_<%=index%>"  class="suncolor"><%= blog.title %></h3>
+					<%= blog.createdate %><br>
+				<%}%>
+					<div class="jumbotron"><%- blog.content %></div>
+				<hr>	
+				<% }) %>
+				</div>		
+
+			</div>	
+				<div class="row text-center">	
+					<%- include paging %> 	
+				</div>			
+		</div><!--end of left side -->
+
+		<!--- ###########################################right side ###########################-->	
+		<div class="hidden-sm hidden-xs col-md-4">  <!-- right side panel -->
+			<div class="row">
+				<div class="col-sm-12">			
+				   <div class="navbar-sidebar">
+					<ul class="nav nav-pills nav-stacked affix" role="tablist">
+					<li class="row">			
+					</li>
+
+					<!-- search -->
+					<li class="row"> 
+						<form class="navbar-form navbar-center" role="search" action="/search" method="post">
+							<div class="form-group">
+							  <input type="text" class="form-control" placeholder="Search" name="searchkey" title="Search input" required>
+							</div>
+							<button type="submit" class="btn btn-seccess">Search</button>
+						  </form> 	 
+					  </li>
+			   
+					 <!-- blog list --> 
+						<% blogs.forEach(function (blog, index) { %>
+							<li class="row"><a href="#blog_<%=index%>"><%- blog.title %></a></li>
+						<% }) %>
+						<!-- ad -->
+						<li class="row">
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<!-- p8ecm_main_Blog1_300x250_as -->
+							<ins class="adsbygoogle"
+							     style="display:inline-block;width:300px;height:250px"
+							     data-ad-client="ca-pub-1018407477199873"
+							     data-ad-slot="5142696541"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+						</li>	
+			
+						<!-- comments -->
+						<li class="row">
+							<table class="table" width="100%">
+								<tr><td width="100%">
+									<form method="post" action="/new_comment">
+									  <textarea class="form-control" name="comment" rows="5"></textarea><br />
+									  <input class="btn btn-primary" type="submit" value="Comment" />
+									</form>	
+								</td></tr>			
+								<% comments.forEach(function (comment, index) { %>
+								<tr><td>
+								   <%=comment.comment%>
+								   
+								</td></tr>
+								<%})%>
+								
+							</table>	
+												
+						</li>
+		
+					</ul>
+				  </div> <!-- end of navbar-->		
+
+			</div> <!-- end of inner col-->		
+			</div><!--end of inner row-->				
+		</div> <!-- end of col-4-->
+	</div>	<!-- end of row -->
+</div>	<!-- end of container -->
+
+ <%- include footer %>
+

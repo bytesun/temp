@@ -1,0 +1,50 @@
+<h1>Notes</h1>
+         <table class="table" >
+             <tr *ngFor="let note of notes; let i=index">
+                 <td>{{note.title}}</td>
+                 <td>{{note.tags}}</td>
+                 <td>{{note.createdate}}</td>
+                 <td><i class="glyphicon glyphicon-trash" (click)="delNote(note._id,i)"></i></td>
+             </tr>
+         </table>
+
+            <form class="form form-vertical" (ngSubmit)="onSubmit()" #userForm="ngForm">
+           
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" [(ngModel)]="model.title" name="title" class="form-control" placeholder="title" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="controls">
+                        <input type="text" [(ngModel)]="model.tags" name="tags" class="form-control" placeholder="tags" required>
+                    </div>
+                </div>
+                  <div  class="form-group">
+                    <label>Category</label>
+                    <div class="controls">
+                      <select class="form-control" name="category" [(ngModel)]="model.category" required>
+                        <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
+                      </select>
+                    </div>
+                  </div> 
+                  
+                <div class="form-group">
+                    <label>Content</label>
+                    <div class="controls">
+                        <textarea class="form-control tinymce" [(ngModel)]="model.content"  name="content" rows="20">
+                            
+                        </textarea>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label></label>
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary"  [disabled]="!userForm.form.valid" >Add</button>
+                         
+                    </div>
+                </div>
+            </form>

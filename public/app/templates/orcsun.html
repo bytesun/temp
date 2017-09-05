@@ -1,0 +1,48 @@
+<!-- header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" >Sun's Console</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+
+            <ul class="nav nav-stacked">
+                <li class="nav-header"> <a  data-toggle="collapse" data-target="#userMenu">Public <i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <ul class="nav nav-stacked collapse in" id="userMenu">
+                        <li class="active"> <a [routerLink]="['/blogs']"><i class="glyphicon glyphicon-th"></i>  Blogs</a></li>
+                        <li class="active"> <a [routerLink]="['/thoughts']"><i class="glyphicon glyphicon-flag"></i>  Thoughts</a></li>                        
+                    </ul>
+                </li>
+                <li class="nav-header"> <a  data-toggle="collapse" data-target="#userMenu">Personal <i class="glyphicon glyphicon-chevron-down"></i></a>
+                    <ul class="nav nav-stacked collapse in" id="userMenu">
+                        <li class="active"> <a [routerLink]="['/todos']"><i class="glyphicon glyphicon-tasks"></i>  Todo</a></li>
+                        <li class="active"> <a [routerLink]="['/notes']"><i class="glyphicon glyphicon-info-sign"></i>  Notes</a></li>
+                    </ul>
+                </li>                
+            </ul>
+        </div>
+        <!-- /col-3 -->
+        <div class="col-sm-9">
+            <router-outlet></router-outlet>
+         </div>
+    </div>
+</div>
+    <!-- /Main -->                    

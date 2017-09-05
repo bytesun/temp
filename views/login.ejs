@@ -1,0 +1,34 @@
+<%- include header %>
+<link rel="stylesheet" href="/assets/css/signin.css">
+<div id="login-template" class="container">
+	<table width="100%">
+		<tr><td align="center"><h1><span class="text text-success">Log In</span></h1>
+		<br><br>
+		</td></tr>
+		<tr><td align="center">
+			 <form class="form form-vertical form-signin" action="/login" method="post">
+                <div class="control-group">
+                    
+                    <div class="controls">
+                        <input type="text" id="username" name="username" class="form-control" placeholder="user name" required autofocus>
+                    </div>
+                </div>	
+                <div class="control-group">
+                    
+                    <div class="controls">
+                        <input type="password" id="password" name="password"  class="form-control" placeholder="Password" required>
+                    </div>
+                </div>   
+                <div class="control-group">
+                    
+                    <div class="controls">
+                        <input type="submit" class="form-control" value="Login">
+                    </div>
+                </div>                 
+		        
+		      </form>
+		</td></tr>
+		</table>
+
+</div>
+<%- include footer %>

@@ -1,0 +1,64 @@
+<%- include header %>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item " href="/">Home</a>
+          <a class="blog-nav-item " href="/think">Think</a>
+          <a class="blog-nav-item active" href="/collection">Collection</a>
+        </nav>
+      </div>
+    </div>
+<div class="container"> 	
+	<div class="row">
+		<div class="col-sm-8">
+			<!-- ----------------------------------thought list -->
+			<div class="row">
+					<div class="col-sm-12">	
+				<br>
+				<% thoughts.forEach(function (thought, index) { %>
+					<blockquote><%- thought.content %></blockquote>
+				<hr>	
+				<% }) %>
+				<div class="row text-center">	
+					<%- include paging %> 	
+				</div>		
+					</div>
+			</div>			
+		</div><!--end of left side -->
+
+		<!--- ###########################################right side ###########################-->	
+		<div class="col-xs-4  hidden-sm">  <!-- right side panel -->
+			<div class="row">
+			<div class="col-sm-12">
+		   <div class="navbar-sidebar">
+			<ul class="nav nav-pills nav-stacked affix" role="tablist">
+			<li class="row">			
+			</li>
+
+
+			<!-- ad -->
+			<li class="row">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- p8ecm_main_thought1_300x250_as -->
+				<ins class="adsbygoogle"
+				     style="display:inline-block;width:300px;height:250px"
+				     data-ad-client="ca-pub-1018407477199873"
+				     data-ad-slot="5142696541"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</li>	
+			
+
+		
+			</ul>
+		  </div> 		
+		</div>		
+					  </div> 		
+		</div>	
+		</div>
+	</div>	
+</div>	
+
+ <%- include footer %>
+
